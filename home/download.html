@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+ <meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>流量领取</title> 
+<link rel="stylesheet" type="text/css" href="/css/index.css"/>  
+</head>
+<body>
+<div class="head-cover2">
+
+<div class="explain">
+本活动支持OPPO R9S
+</div>
+<!-- explain end -->
+  
+</div>
+<!-- head-cover end -->
+
+<div class="receive-bg">
+<a class="receive-btn">
+  前往下载App
+</a>
+<div class="introducebg">
+    <div class="ac-tt">
+        活动规则
+    </div>
+  <!--   ac-tt end -->
+  <ul class="ac-ct">
+    <li>1.用户每天到页面中进行签到，即可领取1天、200MB、限5个App使用的流量包；</li>
+    <li>2.赠送流量包只能用于微信、支付宝、百度地图、新浪微博､淘宝；</li> 
+    <li>3.每台手机最多可领取8个流量包；</li>
+    <li>4.赠送流量包可付费解锁为“无App限制”流量包；</li>     
+  </ul>
+ <!--  ac-ct end -->
+   <div class="ac-tt">
+     活动说明
+    </div>
+  <!--   ac-tt end -->
+  <ul class="ac-ct margin-bottom0">
+    <li>1.活动过程中，凡以不正当手机（作弊、扰乱系统、实施网络攻击等）参与本次活动的用户，红茶有权终止其参与活动，并取消其获得免费流量包资格；</li>
+    <li>
+     2.如遇不可抗力（包含但不限于重大灾害事件、活动受政府机关指令需要停止举办或调整的、活动遭受严重网络攻击或系统出现严重故障），导致活动不能正常进行的，红茶可取消、修改或暂停本活动； 
+    </li> 
+    <li>3.活动中有何疑问，即日起可进行“红茶漫游”微信公众号进入咨询；</li>  
+  </ul>
+ <!--  ac-ct end -->
+
+</div>
+<!-- introducebg end -->
+</div>
+<!-- receive-bg end -->
+
+ <div class="shadow2">
+  <img src="/images/share.png" class="share">
+
+
+
+ </div>
+<script>
+    (function(doc, win) {
+        var _root = doc.documentElement,
+            resizeEvent = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            resizeCallback = function() {
+                var clientWidth = _root.clientWidth,
+                    fontSize = 10 * 10;
+                if (!clientWidth) return;
+                if (clientWidth < 1080) {
+                    fontSize = 100 * (clientWidth / 750);
+                } else {
+                    fontSize = 100 * (1080 / 750);
+                }
+                _root.style.fontSize = fontSize + 'px';
+            };
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvent, resizeCallback, false);
+        doc.addEventListener('DOMContentLoaded', resizeCallback, false);
+    })(document, window);
+    </script>
+<script src="/js/base/sea.js"></script>
+<script>
+    //配置
+    seajs.config({
+        //seajs基础路径
+        base: '/js/',
+        // 别名设置
+        alias: {
+            'jquery': 'base/jquery.js',
+         
+        },
+        // 文件编码
+        charset: 'utf-8'
+    });
+    seajs.use('download');
+</script>  
+</body>
+</html>	

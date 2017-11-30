@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>流量领取</title>
+    <link rel="stylesheet" type="text/css" href="/css/index.css" />
+</head>
+
+<body>
+    <div class="head-cover">
+        <img src="/images/cover.png" class="cover-img">
+    </div>
+    <!-- head-cover end -->
+    <div class="state-bg">
+        <ul class="state-bg2 clearfix">
+        </ul>
+        <!--   state-bg2  end -->
+    </div>
+    <!-- state-bg end -->
+    <div class="receive-bg">
+        <a class="receive-btn">
+          立即领取
+        </a>
+       <div class="receive-btn2">
+          立即领取
+        </div>
+        
+
+        <div class="introducebg">
+          <script type="text/html" id="introduce">
+            <div class="ac-tt">
+             活动规则
+            </div>
+            <!--   ac-tt end -->
+            <div class="ac-ct">
+              {{#promotionInfo.promotionRule}}
+            </div>
+      
+            <div class="ac-tt">
+                活动说明
+            </div>
+        
+            <div class="ac-ct margin-bottom0">
+                {{#promotionInfo.explanation}}
+            </div>
+        
+           </script>
+        </div>
+        <!-- introducebg end -->
+    </div>
+    <!-- receive-bg end -->
+    <!-- 弹窗 -->
+    <div>
+    </div>
+    <div class="shadow"></div>
+    <div class="popup-bg">
+        <img src="/images/delete.png" class="delete" id="dlelete1">
+        <div class="popup">
+            <div class="popup-tip">
+                <script type="text/html" id="success">
+                <ul class="remind">
+                    <li>恭喜您</li>
+                    <li class="fz40">获得{{promotionMessage.dataVolume}}MB流量</li>
+                </ul>
+                </script>
+            </div>
+            <!-- popup-bg end -->
+            <div class="popup-ct">
+                <div class="p-explain">
+                <script type="text/html" id="success2">
+                    您已获得{{promotionMessage.dataVolume}}MB免费流量,请前往我的订单查看并使用。
+                </script>
+                </div>
+                <!--  p-explain end  -->
+                <a class="know">知道啦</a>
+                <div class="p-tip">
+                    *本活动最终解释权归红茶移动所有
+                </div>
+                <!--  p-tip end -->
+            </div>
+            <!-- popup-ct end -->
+        </div>
+        <!-- popup end -->
+    </div>
+    <!-- popup-bg end -->
+    <div class="propbgg Rotation"></div>
+     <!-- propbgg end -->
+    <div class="propbg2">
+        <img src="/images/delete.png" class="delete .icobutton2" id="delete2">
+        <div class="prop2">
+            <div class="prop2-tip2">
+            <script type="text/html" id="flow">
+                <ul class="prop2-tipct">
+                    <li>恭喜您</li>
+                    <li class="fz40">获得{{promotionMessage.dataVolume}}MB流量</li>
+                </ul>
+                <!-- prop2-tipct end -->
+            </script>
+            </div>
+            <div class="prop2-ct">
+                <div class="prop2-ex">
+                    免费流量已放入您的订单列表中
+                    <br/>可在我的订单中查看
+                </div>
+                <!-- prop2-ex end -->
+                <div class="share-bg">
+                    分享至
+                </div>
+                <!--  share-bg end -->
+                <div class="clearfix sharebg">
+                    <ul class="firstul">
+                        <li>
+                            <img src="/images/wx.png" id="wx">
+                            <div class="tt">
+                                微信好友
+                            </div>
+                        </li>
+                        <li>
+                            <img src="/images/qq.png" id="qq">
+                            <div class="tt">
+                                QQ
+                            </div>
+                        </li>
+                    </ul>
+                    <!--  firstul end -->
+                    <ul class="firstul2">
+                        <li>
+                            <img src="/images/wxf.png" id="fd">
+                            <div class="tt">
+                                微信朋友圈
+                            </div>
+                        </li>
+                        <li>
+                            <img src="/images/qqzone.png" id="qz">
+                            <div class="tt">
+                                QQ空间
+                            </div>
+                        </li>
+                    </ul>
+                    <!--  firstul end -->
+                    <ul class="firstul3">
+                        <li>
+                            <img src="/images/wb.png" id="wb">
+                            <div class="tt">
+                                微博
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- prop2-ct end -->
+        </div>
+        <!-- prop2 end -->
+    </div>
+    <!-- propbg2 end -->
+
+    <script>
+    (function(doc, win) {
+        var _root = doc.documentElement,
+            resizeEvent = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            resizeCallback = function() {
+                var clientWidth = _root.clientWidth,
+                    fontSize = 10 * 10;
+                if (!clientWidth) return;
+                if (clientWidth < 1080) {
+                    fontSize = 100 * (clientWidth / 750);
+                } else {
+                    fontSize = 100 * (1080 / 750);
+                }
+                _root.style.fontSize = fontSize + 'px';
+            };
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvent, resizeCallback, false);
+        doc.addEventListener('DOMContentLoaded', resizeCallback, false);
+    })(document, window);
+    </script>
+<script src="/js/base/sea.js"></script>
+<script>
+    //配置
+    seajs.config({
+        //seajs基础路径
+        base: '/js/',
+        // 别名设置
+        alias: {
+            'jquery': 'base/jquery.js',
+            'util': 'util.js',
+       
+            'template': 'base/template.js',
+
+        },
+        // 文件编码
+        charset: 'utf-8'
+    });
+    seajs.use('index');
+</script>
+</body>
+</html>
